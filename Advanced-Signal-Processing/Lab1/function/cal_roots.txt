@@ -1,0 +1,11 @@
+function cal_roots(a,b,c)
+% cal_roots solves a quadratic function ax^2+bx+c=0 
+if a==0
+    error('a = 0 -- Not a quadratic equation');
+% b^2-4*a*c==0
+elseif abs(b^2-4*a*c)<1e-10
+    x = -b/(2*a)
+else 
+    x1 = (-b+sqrt(b^2-4*a*c))/(2*a)
+    x2 = (-b-sqrt(b^2-4*a*c))/(2*a)
+end; 
